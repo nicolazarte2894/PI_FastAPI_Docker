@@ -29,7 +29,7 @@ async def index():
                 <title>FastAPI</title>
             </head>
             <body>
-                <h1>Mi primer API</h1>
+                <h1>Mi primer API esta corriendo masomenos</h1>
                 
             </body>
             </html>
@@ -69,7 +69,7 @@ async def get_count_plataform(plataforma:str):
     return {"cant_movies": movies, "cant_series": series}
 
 
-# Get_listed_in: Retorna la máxima de apariciones del género de peliculas
+# Get_listed_in: Retorna la máxima cantidad de apariciones del género de peliculas
 # params = {genero}
 @app.get('/get_listed_in/')
 async def get_listed_in(genero:str):
@@ -80,12 +80,11 @@ async def get_listed_in(genero:str):
     # Asignamos la plataforma y la cantidad en variables
     plataforma = df_filtered.index[0]
     max_count_genero = int(df_filtered[0])
-    print(plataforma, max_count_genero)
     
     # Retornamos la plataforma en la que el parámetro  más se repite y la cantidad
     return {"plataforma": plataforma, "cantidad_genero" : max_count_genero}
 
-# Get_actor: Retorna el actor que mas se repite segun plataforma y año
+# Get_actor: Retorna el actor que mas se repite según plataforma y año
 # params = {plataforma, anio}
 @app.get('/get_actor/')
 async def get_actor(plataforma: str , anio: int):
