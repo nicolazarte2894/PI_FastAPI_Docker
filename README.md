@@ -1,31 +1,25 @@
 ## **_PROYECTO INDIVIDUAL 01 - DATA ENGINEER_**
 
-## INTRODUCCIÓN
-
 ---
 
-Hola!👋 Me llamo Nicolás Angel Lazarte, les presento mi proyecto individual realizado durante el Bootcamp de Data Science de SoyHenry
+## INTRODUCCIÓN
+
+Hola!👋 Me llamo Nicolás Angel Lazarte, les presento mi proyecto individual realizado durante el Bootcamp de Data Science de SoyHenry.  
 El proyecto consiste en realizar tareas básicas del perfil de Data Engineer al aplicar diferentes técnicas y conocimientos tales como conexión a diferentes fuentes de datos, realizar los procesos de limpieza y transformación pertinentes y disponibilizar los mismos mediante algún medio de consulta local o remoto. En este caso se ultiliza Pandas de Python para realizar un simple análisis eploratorio, MySQL para el montaje de la base de datos y procesos de ETL y por ultimo FastAPI para la construcción de una API de consultas a través de un entorno de Docker.
 
 ## Objetivo
-
----
 
 Construir una API para realizar consultas en el navegador que se obtienen a través de una fuente don datos de títulos de plataforma de streaming y a su vez embebido en un ambiente de Docker.
 
 ## Directorios y archivos del repositorio
 
----
-
 - [**Data**:](./Data/) Directorio donde se disponibilizan las fuentes de datos no sin procesar y la base de datos ya procesadas en sql llamada _movies_titles_
 - [**ETL**:](./ETL/) Directorio que aloja los scripts de sql para la ingestión y transformación de datos en el database movies. Contiene también un archivo `.ipynb` con el [Proceso de EDA y ETL detallado](./ETL/ProcesoETL.ipynb)
 - [**functions**:](./functions/) Directorio con una función de ListaRepetidos que se utiliza en la query `get_actor` de la API dentro del decorador
-- [**app.py**:](/app.py) Script de para la instanciación de FastAPI y desarrollo de las funciones de consulta
+- [**main.py**:](/main.py) Script de para la instanciación de FastAPI y desarrollo de las funciones de consulta
 - [**Dockerfile**:](./Dockerfile) Script con las dependencias para el levantamiento de la imagen y levantamiento del contenedor de Docker
 
 ## Links de Consignas y Explicación del Proyecto
-
----
 
 |                  Descripción                  |                          Link                           | Plataforma |
 | :-------------------------------------------: | :-----------------------------------------------------: | :--------: |
@@ -86,20 +80,38 @@ docker run -it -p 8000:8000 -v cd:/usr/src/app
 
 Se utiliza Docker Desktop en Windows para visualizar la imagen y el contenedor junto con su estado de ejecución
 
-## Stack Tecnológico
+### **4) Deploy del proyecto en Mogenius**
+
+Se decide utilizar Mogenius que permite realizar el deploy de un proyecto en la nube para que se pueda consumir en forma remota con el domain que entrega al crear el servicio. Se creó un espacio de trabajo en dicho ambiente y se vinculó el repositorio de GitHub para poder hacer el deploy junto al archivo Dockerfile para construir la API.
+
+- Link al deploy en Mogenius (click en la imagen):
+
+[<img src="https://www.cloudflare.com/static/90073b1e5bd8a0765640a20febb3dc22/mogenius_logo_quer.png" width=200px />](https://pi-fastapi-doc-prod-fast-api-project-data-engineer-3ouxq3.mo6.mogenius.io/docs)
+
+## PROPUESTAS DE MEJORA
+
+---
+
+Se puede seguir mejorando el proyecto dando un mayor dinamismo e interacción con el usuario a través del Frontend. En un futuro se pretende incorporar archivos `css`, `javascript` o bien con el framwork `jinja2` para armado de los templates e interacción con el backend
+
+## STACK TECNOLÓGICO
 
 ---
 
 - MySQL
+- Jupyter notebook
 - Python
 - Pandas
 - FastAPI
 - Docker
 - HTML
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width=50px height=50px/>         
+<div>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width=50px height=50px/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" width=40px height=40px/>             
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width=40px height=40px/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width=40px height=40px/> 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width=40px height=40px/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" width=40px height=40px/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width=40px height=40px/>
+</div>

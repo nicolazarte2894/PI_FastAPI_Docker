@@ -29,8 +29,7 @@ async def index():
                 <title>FastAPI</title>
             </head>
             <body>
-                <h1>Mi primer API esta corriendo masomenos</h1>
-                
+                <h1>Versión 1.0.0 - FastAPI Project - Nicolas Lazarte</h1>
             </body>
             </html>
 """
