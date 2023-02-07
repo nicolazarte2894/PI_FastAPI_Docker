@@ -24,7 +24,7 @@ Construir una API para realizar consultas en el navegador que se obtienen a trav
 |                  Descripción                  |                          Link                           | Plataforma |
 | :-------------------------------------------: | :-----------------------------------------------------: | :--------: |
 |    Consignas del proyecto de Data Engineer    | [Repositorio](https://github.com/HX-FAshur/PI01_DATA05) |   Github   |
-| Video explicativo del desarrollo del proyecto |                  [Video](youtube.com)                   |  YouTube   |
+| Video explicativo del desarrollo del proyecto |                  [Video](https://www.youtube.com/watch?v=rj5ldz3ZR10&t=10s)                   |  YouTube   |
 
 ## ETAPAS DEL PROYECTO
 
